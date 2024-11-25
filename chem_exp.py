@@ -53,7 +53,7 @@ def plot_maldi_data(file_paths, legends, x_section, svg_path):
             real_peak_x_val = []
             for j in range(len(x_val)):
                 if x_[peak_indices[j]] > x_section[0] and x_[peak_indices[j]] < x_section[1]:
-                    if y_[peak_indices[j]] > 0.1:
+                    if y_[peak_indices[j]] > 70:
                         real_peak_x_val.append(x_[peak_indices[j]])
             
             y_range = data[x_range]["y"]
@@ -147,4 +147,4 @@ def plot_maldi_data(file_paths, legends, x_section, svg_path):
     print("================================")
 
 input=["/Path/To/Input/Data.txt"]
-plot_maldi_data(input,"experimental data",[1050,1120], "/Path/To/Output/File.svg")
+plot_maldi_data(input,"experimental data",[1000,4000], "/Path/To/Outpu/File.svg")
